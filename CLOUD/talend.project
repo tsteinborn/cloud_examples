@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
   <TalendProperties:Project xmi:id="_zR8AgAeoEeaJNKfo60Ls1A" label="CLOUD" description="" language="java" technicalLabel="CLOUD" creationDate="2016-04-21T11:07:31.676+0200" author="_zR8AgQeoEeaJNKfo60Ls1A" productVersion="Talend Data Fabric-6.2.0.20160414_1249-RC1" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/tsteinborn/cloud_examples.git&quot;,&quot;login&quot;:&quot;tsteinborn@talend.com&quot;,&quot;passwd&quot;:&quot;hBubfxhmTyFS+SiDILJQaw==&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DI">
+    <technicalStatus xmi:id="_0lhvUAeoEeaJNKfo60Ls1A" label="development" code="DEV"/>
+    <technicalStatus xmi:id="_0lhvUQeoEeaJNKfo60Ls1A" label="testing" code="TEST"/>
+    <technicalStatus xmi:id="_0lhvUgeoEeaJNKfo60Ls1A" label="production" code="PROD"/>
+    <documentationStatus xmi:id="_0lbosAeoEeaJNKfo60Ls1A" label="unchecked" code="UCK"/>
+    <documentationStatus xmi:id="_0lbosQeoEeaJNKfo60Ls1A" label="checked" code="CHK"/>
+    <documentationStatus xmi:id="_0lbosgeoEeaJNKfo60Ls1A" label="validated" code="VAL"/>
     <migrationTask xmi:id="_0gWUYAeoEeaJNKfo60Ls1A" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_0gWUYQeoEeaJNKfo60Ls1A" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_0gWUYgeoEeaJNKfo60Ls1A" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="ok"/>
@@ -19,4 +25,7 @@
     <migrationTask xmi:id="_0gWUbweoEeaJNKfo60Ls1A" id="org.talend.designer.maven.ui.ConfigMavenRepositoryRemove" breaks="6.0.1" version="6.0.2" status="ok"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_zR8AgQeoEeaJNKfo60Ls1A" login="admin@company.com" firstName="admin" lastName="admin" type="DI" additionnalData="{}"/>
+  <TalendProperties:User xmi:id="_0lnO4AeoEeaJNKfo60Ls1A" login="tsteinborn@talend.com" firstName="Thomas" lastName="Steinborn" type="DI" additionnalData="{}">
+    <projectAuthorization href="../C:/Users/Thomas%20Steinborn/Downloads/6.2RC1/Talend-Studio-20160414_1249-V6.2.0RC1/#/"/>
+  </TalendProperties:User>
 </xmi:XMI>
