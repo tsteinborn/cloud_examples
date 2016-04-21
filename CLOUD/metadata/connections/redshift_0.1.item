@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TalendMetadata:DatabaseConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmi:id="_FLNBIAf2EeafI8CmC650Iw" name="redshift" id="_1OhiAAf1EeafI8CmC650Iw" label="redshift" DatabaseType="Redshift" DriverClass="com.paraccel.Driver" URL="jdbc:paraccel://:5439/" Port="5439" Username="" Password="" ServerName="" DatasourceName="" FileFieldName="" SID="" SqlSynthax="SQL Syntax" DbmsId="redshift_id" ProductId="REDSHIFT" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+  <taggedValue xmi:id="_FLNBIQf2EeafI8CmC650Iw" tag="Is Conn Need Reload" value="false"/>
+  <taggedValue xmi:id="_FM31EAf2EeafI8CmC650Iw" tag="package filter" value=""/>
+  <taggedValue xmi:id="_FM-iwAf2EeafI8CmC650Iw" tag="Status" value=""/>
+  <taggedValue xmi:id="_FM-iwQf2EeafI8CmC650Iw" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_FM-iwgf2EeafI8CmC650Iw" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_FM-iwwf2EeafI8CmC650Iw" tag="Description" value=""/>
+  <taggedValue xmi:id="_FM-ixAf2EeafI8CmC650Iw" tag="Author" value=""/>
+  <taggedValue xmi:id="_FM-ixQf2EeafI8CmC650Iw" tag="otherParameter"/>
+</TalendMetadata:DatabaseConnection>
