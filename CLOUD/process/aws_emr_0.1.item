@@ -119,7 +119,7 @@
     <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" value="" show="false"/>
     <elementParameter field="CHECK" name="USE_YARN" value="false" show="false"/>
     <elementParameter field="CHECK" name="CROSS_PLATFORM_SUBMISSION" value="false" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="EMBEDDED"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE2"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="Hive" show="false"/>
@@ -127,8 +127,8 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;hive/_HOST@EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="HIVESERVER2_LOCAL_PRINCIPAL" value="&quot;/tmp/hiveServer2User.keytab&quot;" show="false"/>
@@ -146,12 +146,12 @@
     <elementParameter field="CHECK" name="USE_SSL" value="false"/>
     <elementParameter field="FILE" name="SSL_TRUST_STORE" value="&quot;/home/usr1/ssl/trust_store.jks&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="SSL_TRUST_STORE_PASSWORD" value="crKjNM+/KPoSQfCGt+RqAg==" show="false"/>
-    <elementParameter field="CHECK" name="SET_MAPRED_JT" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SET_MAPRED_JT" value="false" show="false"/>
     <elementParameter field="TEXT" name="MAPRED_JT" value="&quot;localhost:50300&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SET_RESOURCE_MANAGER" value="true"/>
-    <elementParameter field="TEXT" name="RESOURCE_MANAGER" value="&quot;localhost:8032&quot;"/>
-    <elementParameter field="CHECK" name="SET_FS_DEFAULT_NAME" value="true"/>
-    <elementParameter field="TEXT" name="FS_DEFAULT_NAME" value="&quot;hdfs://localhost:8020&quot;"/>
+    <elementParameter field="CHECK" name="SET_RESOURCE_MANAGER" value="false"/>
+    <elementParameter field="TEXT" name="RESOURCE_MANAGER" value="&quot;localhost:8032&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_FS_DEFAULT_NAME" value="false"/>
+    <elementParameter field="TEXT" name="FS_DEFAULT_NAME" value="&quot;hdfs://localhost:8020&quot;" show="false"/>
     <elementParameter field="CHECK" name="SET_SCHEDULER_ADDRESS" value="true"/>
     <elementParameter field="TEXT" name="RESOURCEMANAGER_SCHEDULER_ADDRESS" value="&quot;localhost:8030&quot;"/>
     <elementParameter field="CHECK" name="SET_JOBHISTORY_ADDRESS" value="true"/>
@@ -383,6 +383,69 @@
       <column defaultValue="" key="false" length="255" name="libthrift" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tAmazonEMRResize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonEMRResize_1" show="false"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE="/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="ADD_TASK_INSTANCE_GROUP"/>
+    <elementParameter field="OPENED_LIST" name="REGION" value="DEFAULT"/>
+    <elementParameter field="TEXT" name="CLUSTER_ID" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="GROUP_ID" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="GROUP_NAME" value="&quot;New instance&quot;"/>
+    <elementParameter field="CHECK" name="ENABLE_KEY_PAIR" value="false" show="false"/>
+    <elementParameter field="TEXT" name="KEY_PAIR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="INSTANCE_COUNT" value="2"/>
+    <elementParameter field="OPENED_LIST" name="TASK_INSTANCE_TYPE" value="&quot;m3.xlarge&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAmazonEMRResize_1"/>
+  </node>
+  <node componentName="tAmazonEMRListInstances" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonEMRListInstances_1" show="false"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE="/>
+    <elementParameter field="OPENED_LIST" name="REGION" value="DEFAULT"/>
+    <elementParameter field="TEXT" name="CLUSTER_ID" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ENABLE_KEY_PAIR" value="false" show="false"/>
+    <elementParameter field="TEXT" name="KEY_PAIR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FILTER_CORE_AND_MASTER_INSTANCES" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAmazonEMRListInstances_1"/>
+  </node>
+  <node componentName="tAmazonEMRManage" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonEMRManage_1" show="false"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE="/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="START"/>
+    <elementParameter field="OPENED_LIST" name="REGION" value="DEFAULT"/>
+    <elementParameter field="TEXT" name="CLUSTER_NAME" value="&quot;&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CLUSTER_VERSION" value="&quot;emr-4.1.0&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="APPLICATION" value="CORE_HADOOP"/>
+    <elementParameter field="TEXT" name="SERVICE_ROLE" value="&quot;EMR_DefaultRole&quot;"/>
+    <elementParameter field="TEXT" name="JOBFLOW_ROLE" value="&quot;EMR_EC2_DefaultRole&quot;"/>
+    <elementParameter field="CHECK" name="ENABLE_LOG" value="true"/>
+    <elementParameter field="TEXT" name="LOG_URL" value="&quot;s3://myawsbucket-emr/&quot;"/>
+    <elementParameter field="CHECK" name="ENABLE_KEY_PAIR" value="false"/>
+    <elementParameter field="TEXT" name="KEY_PAIR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="INSTANCE_COUNT" value="3"/>
+    <elementParameter field="OPENED_LIST" name="MASTER_INSTANCE_TYPE" value="&quot;m3.xlarge&quot;"/>
+    <elementParameter field="OPENED_LIST" name="SLAVE_INSTANCE_TYPE" value="&quot;m3.xlarge&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="PREDICATES" value="RUNNING" show="false"/>
+    <elementParameter field="TEXT" name="NAME_OF_CLUSTER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="ID_OF_CLUSTER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="WAIT_FOR_CLUSTER_READY" value="true"/>
+    <elementParameter field="CHECK" name="VISIBLE_TO_ALL_USERS" value="false"/>
+    <elementParameter field="CHECK" name="TERMINATION_PROTECTED" value="false"/>
+    <elementParameter field="TEXT" name="AVAILABILITY_ZONE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="MASTER_SECURITY_GROUP" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ADDITIONAL_MASTER_SECURITY_GROUPS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SLAVE_SECURITY_GROUP" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ADDITIONAL_SLAVE_SECURITY_GROUPS" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="Additional groups should be set like this : &quot;gname1,gname2,gname3&quot;"/>
+    <elementParameter field="TABLE" name="STEP_TABLE"/>
+    <elementParameter field="CHECK" name="KEEP_ALIVE" value="true"/>
+    <elementParameter field="CHECK" name="WAIT_FOR_STEPS_COMPLETE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveConnection_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
@@ -405,6 +468,21 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPigLoad_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonEMRResize_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonEMRListInstances_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAmazonEMRManage_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
