@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="connection_marketo_client_access_id" prompt="connection_marketo_client_access_id?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="connection_marketo_endpoint" prompt="connection_marketo_endpoint?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="connection_marketo_secret_key" prompt="connection_marketo_secret_key?" promptNeeded="false" type="id_String" value=""/>
+</talendfile:ContextType>
