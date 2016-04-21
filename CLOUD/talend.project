@@ -3212,6 +3212,7 @@
       <relatedItems xmi:id="_ngmxsgexEeafI8CmC650Iw" id="DQTechnical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_ngmxswexEeafI8CmC650Iw" id="MDM" version="Latest" type="routine"/>
     </ItemsRelations>
+    <deletedFolders>process/Webhook</deletedFolders>
     <migrationTask xmi:id="_0gWUYAeoEeaJNKfo60Ls1A" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_0gWUYQeoEeaJNKfo60Ls1A" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_0gWUYgeoEeaJNKfo60Ls1A" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="ok"/>
