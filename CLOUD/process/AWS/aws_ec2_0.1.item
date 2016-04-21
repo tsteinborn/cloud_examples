@@ -2,6 +2,8 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -109,4 +111,44 @@
     <routinesParameter id="_JsAZQHlHEeS5M-4wmV8XNg" name="Transformation"/>
     <routinesParameter id="_1cAIgMywEeSadJSYhJEDKA" name="tic_word_titleCase"/>
   </parameters>
+  <node componentName="tCloudStart" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tCloudStart_1" show="false"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE="/>
+    <elementParameter field="CLOSED_LIST" name="PROVIDER" value="AWS_EC2"/>
+    <elementParameter field="TEXT" name="IMAGE_ID" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="REGION" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ZONE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="INSTANCE_NAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="INSTANCE_COUNT" value="1"/>
+    <elementParameter field="CLOSED_LIST" name="TYPE" value="T1_MICRO"/>
+    <elementParameter field="CHECK" name="PROCEED_WITH_KEYPAIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="KEYPAIR_OPTION" value="USE_EXISTING" show="false"/>
+    <elementParameter field="TEXT" name="KEYPAIR" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="SECURITY_GROUPS"/>
+    <elementParameter field="DIRECTORY" name="KEYPAIR_FOLDER" value="&quot;C:/Users/Thomas Steinborn/Downloads/6.2RC1/Talend-Studio-20160414_1249-V6.2.0RC1/workspace&quot;" show="false"/>
+    <elementParameter field="TABLE" name="VOLUMES"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tCloudStop" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tCloudStop_1" show="false"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE="/>
+    <elementParameter field="CLOSED_LIST" name="PROVIDER" value="AWS_EC2"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="SUSPEND"/>
+    <elementParameter field="CLOSED_LIST" name="PREDICATES" value="RUNNING"/>
+    <elementParameter field="TEXT" name="INSTANCE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="ID" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tCloudStart_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tCloudStop_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
 </talendfile:ProcessType>
